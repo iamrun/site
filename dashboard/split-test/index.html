@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="assets/styles/core.css" rel="stylesheet">
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">IAM</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item"><a class="nav-link" href="#">BackPain Breakthrough</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Divine Locks</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">My Golfing Store</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">Hormonal Harmony</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">MindBody Matrix</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md-3 col-lg-2 d-md-block sidebar collapse p-3" style="width: 280px;">
+          <ul class="list-unstyled ps-0">
+            <li>
+              <button id="desktop-main" class="btn btn-toggle align-items-center" data-bs-toggle="collapse" data-bs-target="#desktop-collapse" aria-expanded="true" >
+              Desktop
+              </button>
+              <div class="collapse show" id="desktop-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/desktop.all.htm">All</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/desktop.main.htm">Main (Front End)</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/desktop.headlines.htm">Headlines</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/desktop.leads.htm">Leads</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/desktop.prices.htm">Prices</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/desktop.cart.htm">Cart Page</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/desktop.offer.htm">Offer / Bonuses</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/desktop.exit.htm">Exit Pops</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#mobile-collapse" aria-expanded="false">
+              Mobile
+              </button>
+              <div class="collapse" id="mobile-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/mobile.all.htm">All</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/mobile.main.htm">Main (Front End)</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/mobile.headlines.htm">Headlines</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/mobile.leads.htm">Leads</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/mobile.prices.htm">Prices</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/mobile.cart.htm">Cart Page</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/mobile.offer.htm">Offer / Bonuses</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/mobile.exit.htm">Exit Pops</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#upsell1-collapse" aria-expanded="false">
+              Upsell 1
+              </button>
+              <div class="collapse" id="upsell1-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/upsell1.all.htm">All</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/upsell1.main.htm">Main (Front End)</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/upsell1.headlines.htm">Headlines</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/upsell1.leads.htm">Leads</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/upsell1.prices.htm">Prices</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/upsell1.cart.htm">Cart Page</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/upsell1.offer.htm">Offer / Bonuses</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/upsell1.exit.htm">Exit Pops</a></li>
+                </ul>
+              </div>
+            </li>
+            <!-- <li class="border-top my-3"></li> -->
+            <li>
+              <button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#downsell1-collapse" aria-expanded="false">
+              Downsell 1
+              </button>
+              <div class="collapse" id="downsell1-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/downsell1.all.htm">All</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/downsell1.main.htm">Main (Front End)</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/downsell1.headlines.htm">Headlines</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/downsell1.leads.htm">Leads</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/downsell1.prices.htm">Prices</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/downsell1.cart.htm">Cart Page</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/downsell1.offer.htm">Offer / Bonuses</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/downsell1.exit.htm">Exit Pops</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#upsell2-collapse" aria-expanded="false">
+              Upsell 2
+              </button>
+              <div class="collapse" id="upsell2-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/upsell2.all.htm">All</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/upsell2.main.htm">Main (Front End)</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/upsell2.headlines.htm">Headlines</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/upsell2.leads.htm">Leads</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/upsell2.prices.htm">Prices</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/upsell2.cart.htm">Cart Page</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/upsell2.offer.htm">Offer / Bonuses</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/upsell2.exit.htm">Exit Pops</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#downsell2-collapse" aria-expanded="false">
+              Downsell 2
+              </button>
+              <div class="collapse" id="downsell2-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/downsell2.all.htm">All</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/downsell2.main.htm">Main (Front End)</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/downsell2.headlines.htm">Headlines</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/downsell2.leads.htm">Leads</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/downsell2.prices.htm">Prices</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/downsell2.cart.htm">Cart Page</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/downsell2.offer.htm">Offer / Bonuses</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/downsell2.exit.htm">Exit Pops</a></li>>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#upsell3-collapse" aria-expanded="false">
+              Upsell 3
+              </button>
+              <div class="collapse" id="upsell3-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/upsell3.all.htm">All</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/upsell3.main.htm">Main (Front End)</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/upsell3.headlines.htm">Headlines</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/upsell3.leads.htm">Leads</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/upsell3.prices.htm">Prices</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/upsell3.cart.htm">Cart Page</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/upsell3.offer.htm">Offer / Bonuses</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/upsell3.exit.htm">Exit Pops</a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <button class="btn btn-toggle align-items-center collapsed" data-bs-toggle="collapse" data-bs-target="#downsell3-collapse" aria-expanded="false">
+              Downsell 3
+              </button>
+              <div class="collapse" id="downsell3-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/downsell3.all.htm">All</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/downsell3.main.htm">Main (Front End)</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/downsell3.headlines.htm">Headlines</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/downsell3.leads.htm">Leads</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/downsell3.prices.htm">Prices</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/downsell3.cart.htm">Cart Page</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/downsell3.offer.htm">Offer / Bonuses</a></li>
+                  <li><a href="#" class="view-link link-dark" data-view-path="views/downsell3.exit.htm">Exit Pops</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </aside>
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 flex-grow-1">
+        </main>
+      </div>
+      <!--row-->
+    </div>
+    <!--container-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src='assets/scripts/core.js'></script>
+  </body>
+</html>
