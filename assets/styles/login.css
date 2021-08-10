@@ -22,7 +22,7 @@ body {
   margin: 0 auto;
   border-radius: 10px;
   background-color: #fff;
-  box-shadow: 0 0 100px 10px rgba(0,48,171,.1);
+  box-shadow: 0 0 100px 10px rgba(30,59,151,.1);
 }
 .form-login .checkbox {
   font-weight: 400;
