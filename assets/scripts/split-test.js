@@ -3,7 +3,7 @@
 
   if (window.XMLHttpRequest) {
     let http,
-      path = 'http://localhost:5500/',
+      path = 'http://localhost:5500/dashboard/split-test/',
       view;
 
     Array.from(document.querySelectorAll('.view-link')).forEach(e => {
