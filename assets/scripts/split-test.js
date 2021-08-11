@@ -1,10 +1,22 @@
+/*
+--------------------------------------------------
+split-test.js
+--------------------------------------------------
+*/
+
 (function () {
   'use strict';
 
   if (window.XMLHttpRequest) {
     let http,
-      path = 'http://localhost:5500/dashboard/split-test/',
-      view;
+        local = 'http://localhost:5500/dashboard/split-test/',
+        host  = window.location.href,
+        port  = 5500,
+        path,
+        view;
+
+    if (host.includes('iamms.co'))  { path = 'https://iamms.co/dashboard/split-test/'  }
+    if (host.includes('localhost')) { path = 'http://localhost:'+port+'/dashboard/split-test/' }
 
     Array.from(document.querySelectorAll('.view-link')).forEach(e => {
       e.addEventListener('click', () => {
