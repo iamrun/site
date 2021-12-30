@@ -26,21 +26,10 @@
       }
 
       .swiper-slide {
+        padding-top: 25vh;
         text-align: center;
         font-size: 18px;
         background: #fff;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: -webkit-flex;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        -webkit-justify-content: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        -webkit-align-items: center;
-        align-items: center;
       }
 
       .swiper-slide img {
@@ -49,6 +38,64 @@
         height: 100%;
         object-fit: cover;
       }
+
+      .swiper-form {
+        width: 80%;
+        max-width: 800px;
+        margin: auto;
+        text-align: left;
+      }
+
+      .swiper-form input[type='text'],
+      .swiper-form textarea {
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+        background-color: #f0f0f0;
+        border-radius: 4px;
+        border: 0;
+      }
+
+      .swiper-form textarea {
+        min-height: 150px;
+      }
+
+      .swiper .step {
+        top: 30px;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+        padding: 10px;
+        display: inline-block;
+        border-radius: 100px;
+        background-color: #057AFF;
+        font-size: 2em;
+        text-align: center;
+        line-height: 50px;
+        color: #fff;
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        top: auto;
+        bottom: 40px;
+      }
+
+      .swiper-button-next {
+        right: 30px;
+      }
+
+      .swiper-button-prev {
+        left: 30px;
+      }
+
+      .swiper-form input[type='checkbox'] {
+        width: 30px;
+        height: 30px;
+        text-align: left;
+      }
+      .swiper
     </style>
   </head>
 
@@ -57,7 +104,45 @@
     <div class='swiper new-project'>
       <div class='swiper-wrapper'>
         <div class='swiper-slide'>
-          
+          <!-- step 1 -->
+          <div class='swiper-form'>
+            <div><span class='step'>1</span></div>
+            <h2>Hi, let's get started with your new project!</h2>
+            <div>
+              <p>First thing's first, what's the name of this project?</p>
+              <input type='text' name='task-name'>
+            </div>
+            <p>Can you provide us with a brief description of the project?</p>
+            <textarea name='task-description'></textarea>
+          </div>
+        </div>
+
+        <!-- step 2 -->
+        <div class='swiper-slide'>
+          <div class='swiper-form'>
+            <div><span class='step'>2</span></div>
+            <h2>Cool project name!</h2>
+            <div>
+              <p>Now....</p>
+              <input type='text' name='task-name'>
+            </div>
+            <p>And...</p>
+            <input type='text' name='some-thing'>
+          </div>
+        </div>
+
+        <!-- step 3 -->
+        <div class='swiper-slide'>
+          <div class='swiper-form'>
+            <div><span class='step'>3</span></div>
+            <h2>Blah blah blah</h2>
+            <div>
+              <p>Now something more....</p>
+              <input type='text' name='some-thing'>
+            </div>
+            <p>And will it...</p>
+            <div class='checkbox'><input type='checkbox'></div>
+          </div>
         </div>
       </div>
       <div class='swiper-button-next'></div>
@@ -68,35 +153,52 @@
     <!-- swiper js -->
     <script src='https://unpkg.com/swiper/swiper-bundle.min.js'></script>
     <script>
-      // init swiper
-      var swiper = new Swiper('.new-project', {
-        pagination: {
-          el: '.swiper-pagination',
-          type: 'progressbar',
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      });
+    // init swiper
+    var swiper = new Swiper('.swiper.new-project', {
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'progressbar',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      simulateTouch:false,
+    });
 
-      /*const data = {
-        "Task Name": 'Some New Task',
-        "Task Description": 'Some New Task Description',
-      };
+    function createProject() {
+      let taskName = document.querySelector('[name="task-name"]');
+      let taskDescription = document.querySelector('[name="task-description"]');
 
-      fetch('https://hooks.zapier.com/hooks/catch/11304969/b1waa0h/', {
-        method: 'POST',
-        headers: {'Accept': 'application/json'},
-        body: JSON.stringify(data),
-      })
-        .then(response => response.json())
-        .then(data => {
-        console.log('Zapier Post | Success:', data);
-      })
-        .catch((error) => {
-        console.error('Zapier Post | Error:', error);
-      });*/
+      if (taskName.value.length > 0 && taskDescription.value.length > 0) {
+        const data = {
+          "Task Name": taskName.value,
+          "Task Description": taskDescription.value,
+        };
+
+        fetch('https://hooks.zapier.com/hooks/catch/11304969/b1waa0h/', {
+          method: 'POST',
+          headers: {'Accept': 'application/json'},
+          body: JSON.stringify(data),
+        })
+          .then(response => response.json())
+          .then(data => {
+          console.log('Zapier Post | Success:', data);
+        })
+          .catch((error) => {
+          console.error('Zapier Post | Error:', error);
+        });
+      } else {
+        alert ('Yo, put some info in the damn boxes dude!');
+
+      }
+    }
+
+    document.querySelector('.swiper-button-next').onclick = function () {
+      if (swiper.activeIndex === 1) {
+        createProject();
+      }
+    }
     </script>
   </body>
 </html>
