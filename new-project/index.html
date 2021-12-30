@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+  <head>
+    <title>New Project — IAM</title>
+    <link rel='stylesheet' href='https://unpkg.com/swiper/swiper-bundle.min.css'>
+
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- swiper -->
+    <div class='swiper new-project'>
+      <div class='swiper-wrapper'>
+        <div class='swiper-slide'>
+          
+        </div>
+      </div>
+      <div class='swiper-button-next'></div>
+      <div class='swiper-button-prev'></div>
+      <div class='swiper-pagination'></div>
+    </div>
+
+    <!-- swiper js -->
+    <script src='https://unpkg.com/swiper/swiper-bundle.min.js'></script>
+    <script>
+      // init swiper
+      var swiper = new Swiper('.new-project', {
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'progressbar',
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      });
+
+      /*const data = {
+        "Task Name": 'Some New Task',
+        "Task Description": 'Some New Task Description',
+      };
+
+      fetch('https://hooks.zapier.com/hooks/catch/11304969/b1waa0h/', {
+        method: 'POST',
+        headers: {'Accept': 'application/json'},
+        body: JSON.stringify(data),
+      })
+        .then(response => response.json())
+        .then(data => {
+        console.log('Zapier Post | Success:', data);
+      })
+        .catch((error) => {
+        console.error('Zapier Post | Error:', error);
+      });*/
+    </script>
+  </body>
+</html>
