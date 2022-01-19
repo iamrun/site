@@ -1,0 +1,204 @@
+/*
+--------------------------------------------------
+dom
+--------------------------------------------------
+*/
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  font-family: 'Be Vietnam Pro', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+}
+
+.hide {
+  z-index: -1;
+  position: relative;
+  transition: all .5s ease;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/*
+--------------------------------------------------
+elements
+--------------------------------------------------
+*/
+
+.fieldset {
+  margin-bottom: 30px;
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+label.click,
+input[type='radio'] {
+  top: 10px;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  position: relative;
+  cursor: pointer;
+}
+img.emoji {
+  max-width: 80px;
+}
+
+img.emoji.wave {
+  margin-top: -40px;
+  max-width: 80px;
+}
+
+/*
+--------------------------------------------------
+presets
+--------------------------------------------------
+*/
+
+.b, b {
+  font-weight: 600;
+}
+
+.heavy {
+  font-weight:
+}
+
+.big {
+  font-size: 2em;
+}
+
+.color.blue  { color: #222B53 }
+.color.royal { color: #3070DC }
+.bg.blue     { background: #222B53; color: #fff }
+.bg.royal    { background: #3070DC; color: #fff }
+
+.float-r { float: right }
+.float-l { float: left  }
+
+.button,
+input[type='button'] {
+  padding: 15px 50px;
+  transition: all .2s ease;
+  border-radius: 100px;
+  border: 0;
+  cursor: pointer;
+  font-size: .95em;
+}
+
+.button:hover {
+  background-color: #222B53;
+}
+
+/*
+--------------------------------------------------
+swiper
+--------------------------------------------------
+*/
+
+.swiper-pagination-progressbar-fill {
+  background: #222B53!important;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-title {
+  margin: 20px;
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 400;
+  color: #222B53
+}
+
+.swiper-slide {
+  padding-top: 25vh;
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-form {
+  width: 80%;
+  max-width: 800px;
+  margin: auto;
+  text-align: left;
+}
+
+.swiper-form input[type='text'],
+.swiper-form textarea {
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  border: 0;
+}
+
+.swiper-form textarea {
+  min-height: 150px;
+}
+
+.swiper .step {
+  top: 30px;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  padding: 10px;
+  display: inline-block;
+  border-radius: 100px;
+  background-color: #222B53;
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  top: auto;
+  bottom: 40px;
+}
+
+.swiper-button-next {
+  right: 50px;
+}
+
+.swiper-button-prev {
+  left: 50px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #222B53;
+}
+
+.swiper-button-disabled {
+  opacity: 0;
+  display: none;
+}
+
+.swiper-form input[type='checkbox'] {
+  width: 30px;
+  height: 30px;
+  text-align: left;
+}
