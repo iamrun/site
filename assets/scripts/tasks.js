@@ -1,5 +1,5 @@
 // init swiper
-var swiper = new Swiper('.swiper.new-project', {
+var swiper = new Swiper('.swiper.project-request', {
   pagination: {
     el: '.swiper-pagination',
     type: 'progressbar',

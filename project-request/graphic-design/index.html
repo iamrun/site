@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Project Request</title>
+    <link rel='stylesheet' href='https://unpkg.com/swiper/swiper-bundle.min.css'>
+    <link rel='stylesheet' href='../../../assets/styles/main.css'>
+  </head>
+
+  <body>
+    <!-- swiper -->
+    <div class='swiper project-request'>
+      <div class='swiper-wrapper'>
+        <div class='swiper-slide'>
+          <div class='swiper-form'>
+            <h2>
+              <img width='80' height='80' class='emoji wave' src='../../../assets/images/emoji-wave.png'><br>
+              Hi! Let's get started with your project...</h2>
+            <div>
+              <p>Please choose a project type:</p>
+              <select>
+                <option value='' disabled selected>Select</option>
+                <option value='page-build'>Page Build</option>
+                <option value='page-edit'>Page Edit</option>
+                <option value='graphic-design'>Graphic Design</option>
+                <option value='pixel-placement'>Pixel Placement</option>
+                <option value='split-test'>Split Test</option>
+                <option value='vsl'>VSL</option>
+                <option value='misc'>Miscellaneous</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class='swiper-slide'>
+          <div class='swiper-form'>
+            <div><span class='step'></span></div>
+            <div class='fieldset'>
+              <p>What's the Vendor name of this project? </p>
+              <input type='text' name='task-vendor-name' placeholder='Example: Back Pain Breakthrough'>
+            </div>
+            <div class='fieldset'>
+              <p>What's the name of this project?</p>
+              <input type='text' name='task-name' placeholder='Example: Upsell 1 Split Test'>
+          </div>
+        </div>
+      </div>
+
+        <div class='swiper-slide'>
+          <div class='swiper-form'>
+            <div><span class='step'></span></div>
+            <h2>Awesome!</h2>
+            <div>
+              <p>Provide us with as much details about this project as you can:</p>
+              <textarea name='task-description'></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class='swiper-button-next'></div>
+      <div class='swiper-button-prev'></div>
+      <div class='swiper-pagination'></div>
+    </div>
+
+    <!-- swiper js -->
+    <script src='https://unpkg.com/swiper/swiper-bundle.min.js'></script>
+    <script src='../../../assets/scripts/main.js'></script>
+    <script src='../../../assets/scripts/project-request.js'></script>
+  </body>
+</html>

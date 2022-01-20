@@ -15,7 +15,7 @@ let swiper = new Swiper('.swiper', {
 // get then set current view
 let host = window.location.host;
 let href = window.location.href;
-let path = href.split('?')[1].substr(1);
+let path = href.split('?')[1].substring(1);
 let file = path.replaceAll('/','.')+'.htm';
 let view = href.split('?')[0]+'/view/'+file;
 let main = (function () {
@@ -34,8 +34,8 @@ let main = (function () {
 
 if (view) {
   let http;
-  //document.getElementById("ajaxButton").addEventListener('click', request);
 
+  //document.getElementById("ajaxButton").addEventListener('click', request);
   function request() {
     http = new XMLHttpRequest();
 

@@ -1,3 +1,5 @@
+@import 'https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap';
+
 /*
 --------------------------------------------------
 dom
@@ -151,6 +153,14 @@ swiper
   background-color: #f0f0f0;
   border-radius: 4px;
   border: 0;
+  font-size: .90em;
+}
+
+.swiper-form select {
+  padding: 15px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: .95em;
 }
 
 .swiper-form textarea {
@@ -202,3 +212,24 @@ swiper
   height: 30px;
   text-align: left;
 }
+
+.swiper-slide:nth-child(1) .step:after  { content: '1' }
+.swiper-slide:nth-child(2) .step:after  { content: '2' }
+.swiper-slide:nth-child(3) .step:after  { content: '3' }
+.swiper-slide:nth-child(4) .step:after  { content: '4' }
+.swiper-slide:nth-child(5) .step:after  { content: '5' }
+.swiper-slide:nth-child(6) .step:after  { content: '6' }
+.swiper-slide:nth-child(7) .step:after  { content: '7' }
+.swiper-slide:nth-child(8) .step:after  { content: '8' }
+.swiper-slide:nth-child(9) .step:after  { content: '9' }
+.swiper-slide:nth-child(10) .step:after { content: '10' }
+.swiper-slide:nth-child(11) .step:after { content: '11' }
+.swiper-slide:nth-child(12) .step:after { content: '12' }
+.swiper-slide:nth-child(13) .step:after { content: '13' }
+.swiper-slide:nth-child(14) .step:after { content: '14' }
+.swiper-slide:nth-child(15) .step:after { content: '15' }
+.swiper-slide:nth-child(16) .step:after { content: '16' }
+.swiper-slide:nth-child(17) .step:after { content: '17' }
+.swiper-slide:nth-child(18) .step:after { content: '18' }
+.swiper-slide:nth-child(19) .step:after { content: '19' }
+.swiper-slide:nth-child(20) .step:after { content: '20' }
