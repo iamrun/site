@@ -1,38 +1,29 @@
 <!-- swiper -->
 <div class='swiper page-build'>
   <div class='swiper-title'>Project Request | <b>Page Build</b></div>
+  <button class='restart'>
+    <i class='icon-refresh'></i>
+  </button>
   <div class='swiper-wrapper'>
     <div class='swiper-slide'>
       <div class='swiper-form'>
         <div><span class='step'></span></div>
         <div class='fieldset'>
-          <!-- <p class='big color blue b'>Let's get started</p> -->
           <div class='field'>
-            <label>
-              <p>What's your Vendor name?</p>
-            <input type='text' name='vendor-name' placeholder='E.g. Back Pain Breakthrough'>
-          </label>
+            <p>
+              <label>
+                What's your Vendor name?
+                <input type='text' name='vendor-name' placeholder='E.g. Back Pain Breakthrough'>
+              </label>
+            </p>
           </div>
           <div class='field'>
-            <label>
-              <p>What's the name of this Project?</p>
-            <input type='text' name='project-name' placeholder='E.g. Text Sales Letter'>
-          </label>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class='swiper-slide'>
-      <div class='swiper-form'>
-        <div><span class='step'></span></div>
-        <div class='fieldset'>
-          <!-- <p class='big color blue b'>Let's get started</p> -->
-          <div class='field'>
-            <label>
-              <p>Please provide all details for this project:</p>
-              <textarea name='project-details' style='min-height:300px'></textarea>
-            <label>
+            <p>
+              <label>
+                What's the name of this Project?
+                <input type='text' name='project-name' placeholder='E.g. Text Sales Letter'>
+              </label>
+            </p>
           </div>
         </div>
       </div>
@@ -42,32 +33,234 @@
       <div class='swiper-form'>
         <div><span class='step'></span></div>
         <div class='fieldset'>
-          <p class='big color blue b'>Is this a new account?</p>
           <div class='field'>
-            <label class='click'><input type='radio' name='names' value='Yes'> Yes</label>
+            <p>
+              <label>
+                Please provide all details about this project:
+                <textarea name='project-details' style='min-height:300px'></textarea>
+              </label>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='swiper-slide'>
+      <div class='swiper-form'>
+        <div><span class='step'></span></div>
+        <div class='fieldset'>
+          <p>Is this a new account?</p>
+          <div class='field'>
+            <label class='click'>
+              <input type='radio' name='new-account' value='Yes'> Yes
+            </label>
           </div>
           <div class='field'>
-            <label class='click'><input type='radio' name='names' value='No'> No</label>
+            <label class='click'>
+              <input type='radio' name='new-account' value='No'> No
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='swiper-slide slide-new-account'>
+      <div class='swiper-form'>
+        <div><span class='step'></span></div>
+        <div><span class='skip'>Skip this step if you chose <b><u>NO</u></b> in the previous step <button class='button' onclick='swiper.slideNext()'><i class='rarr'></i></button></span></div>
+        <div class='fieldset'>
+          <div class='field'>
+            <p>
+              <label>
+                What's the Company name?
+                <input type='text' name='company-name' placeholder='E.g. My Golfing Store, Inc.'>
+              </label>
+            </p>
+          </div>
+          <div class='field'>
+            <p>
+              <label>
+                Contact name:
+                <input type='text' name='contact-name' placeholder=''>
+              </label>
+            </p>
+          </div>
+          <div class='field'>
+            <p>
+              <label>
+                <span class='display-block'>Contact Email or Skype:</span>
+                <input type='email' name='contact-email' placeholder='Email address' style='max-width:49%; margin-right:1.1%; display:inline-block;'> <input type='email' name='contact-email' placeholder='Skype username' style='max-width:49%; display:inline-block;'>
+              </label>
+            </p>
+            <!--
+            <p>
+              <label>
+                <span class='display-block'>Access credentials:</span>
+                <input type='email' name='contact-email' placeholder='Email address' style='max-width:49%; margin-right:1.1%; display:inline-block;'> <input type='email' name='contact-email' placeholder='Skype username' style='max-width:49%; display:inline-block;'>
+              </label>
+            </p>
+          -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='swiper-slide'>
+      <div class='swiper-form'>
+        <div><span class='step'></span></div>
+        <div class='fieldset'>
+          <p>Has the COI been submitted and approved? (If applicable for physical goods)</p>
+          <div class='field'>
+            <label class='click'>
+              <input type='radio' name='coi-approved' value='Yes'> Yes
+            </label>
+          </div>
+          <div class='field'>
+            <label class='click'><input type='radio' name='coi-approved' value='No'> No
+            </label>
+          </div>
+          <div class='field'>
+            <label class='click'><input type='radio' name='coi-approved' value='Not Applicable'> Not Applicable
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='swiper-slide'>
+      <div class='swiper-form'>
+        <div><span class='step'></span></div>
+        <div class='fieldset'>
+          <div class='field'>
+            <p>
+              <label>
+                What's the manufacture name?
+                <input type='text' name='manufacture-name' placeholder=''>
+              </label>
+            </p>
+          </div>
+          <div class='field'>
+            <p>
+              <label>
+                Manufacture address:
+                <input type='text' name='manufacture-address' placeholder=''>
+              </label>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='swiper-slide'>
+      <div class='swiper-form'>
+        <div><span class='step'></span></div>
+        <div class='fieldset'>
+          <div class='field'>
+            <p>
+              <label>
+                What's the fulfillment name?
+                <input type='text' name='fulfillment-name' placeholder=''>
+              </label>
+            </p>
+          </div>
+          <div class='field'>
+            <p>
+              <label>
+                Fulfillment address:
+                <input type='text' name='fulfillment-address' placeholder=''>
+              </label>
+            </p>
+          </div>
+          <div class='field'>
+            <p style='margin-bottom:0'>Will we set up the integration with the fulfillment company?</p>
+            <div class='field'>
+              <label class='click'><input type='radio' name='fulfillment-integration' value='No'> Yes
+              </label>
+            </div>
+            <div class='field'>
+              <label class='click'><input type='radio' name='fulfillment-integration' value='No'> No
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class='swiper-slide'>
+      <div class='swiper-form'>
+        <div><span class='step'></span></div>
+        <div class='fieldset'>
+          <div class='field'>
+            <p>
+              <label>
+                <span class='display-block' style='margin-bottom:15px'>Is this a text sales page (TSL) or a video sales page (VSL)?</span>
+                <select name='page-type'>
+                  <option value='' disabled selected>Select</option>
+                  <option value='tsl'>TSL</option>
+                  <option value='vsl'>VSL</option>
+                </select>
+              </label>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='swiper-slide slide-tsl'>
+      <div class='swiper-form'>
+        <div><span class='step'></span></div>
+        <div class='fieldset'>
+          <div class='field'>
+            <p>Please provide the copy document for the TSL:</p>
+            <input
+              name='tsl-documents'
+              type='file'
+              class='drag-drop'
+              accept='.txt,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document'>
+            <input name='tsl-loom' type='url' style='width:49%; padding:21px' placeholder='Or paste url to document here'>
+          </div>
+          <div class='field'>
+            <p>
+              <label>
+                Please provide video instructions, if any:
+                <input name='tsl-loom' type='url' placeholder='E.g. https://www.loom.com/some-video'>
+              </label>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class='swiper-slide slide-vsl'>
+      <div class='swiper-form'>
+        <div><span class='step'></span></div>
+        <div class='fieldset'>
+          <div class='field'>
+            <p>
+
+              <span class='display-block'>Please provide the script for the VSL:</span>
+                <input
+                  name='vsl-documents'
+                  type='file'
+                  class='drag-drop'
+                  accept='.txt,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document'>
+                <input name='tsl-loom' type='url' style='width:49%; padding:21px' placeholder='Or paste url to document here'>
+            </p>
+          </div>
+          <div class='field'>
+            <p>
+              <label>
+                Please provide video instructions, if any:
+                <input name='tsl-loom' type='url' placeholder='E.g. https://www.loom.com/some-video'>
+              </label>
+            </p>
           </div>
         </div>
       </div>
     </div>
 
     <!--
-    <div class='swiper-slide'>
-      <div class='swiper-form'>
-        <div><span class='step'>4</span></div>
-        <div class='fieldset'>
-          <p class='big color blue b'>Are all the images for the build included or are there explanations of what's needed for each image?</p>
-          <div class='field'>
-            <label class='click'><input type='radio' name='images' value='Yes'> Yes</label>
-          </div>
-          <div class='field'>
-            <label class='click'><input type='radio' name='images' value='No'> No</label>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <div class='swiper-slide'>
       <div class='swiper-form'>
@@ -80,7 +273,6 @@
         </div>
       </div>
     -->
-    </div>
   </div>
 
   <div class='swiper-button-next'></div>
@@ -89,10 +281,10 @@
 </div>
 
 <iframe
-  style='width:0;height:0;border:0;opacity:0;visibility:hidden';
+  style='width:0;height:0;border:0;opacity:0;visibility:hidden'
   srcdoc="
     <script>
-      top.document.title = 'Project Request: Start';
+      top.document.title = 'Project Request | Page Build';
     </script>
   ">
 </iframe>

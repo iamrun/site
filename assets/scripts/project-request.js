@@ -19,11 +19,18 @@ let swiper = new Swiper('.swiper', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  initialSlide: (function() {
+    if (localStorage.getItem('iam.run.currentSlide')) {
+      return localStorage.getItem('iam.run.currentSlide');
+    }
+    return 0;
+  })(),
   simulateTouch: false,
+
 });
 
 try {
-  // get then set current view
+  // get and set current view
   let host = window.location.host;
   let href = window.location.href;
   let path = href.split('?')[1].substring(1);
@@ -39,7 +46,8 @@ try {
         try {
           document.querySelector('.view').insertAdjacentHTML('afterbegin', content);
           swiper.init();
-          console.log(swiper.length);
+          swiperActions();
+          swiperConditions();
         } catch (err) { console.log('Error: ', err); }
       }
     };
@@ -75,3 +83,35 @@ try {
 
   }
 } catch (err){}
+
+function swiperActions() {
+  swiper.on('slideChange', function(e) {
+    localStorage.setItem('iam.run.currentSlide', swiper.activeIndex);
+  });
+
+  document.querySelector('.restart').onclick = function() {
+    let confirmRestart = 'You are about to abort your request. You will lose all information you\'ve provided. Would you like to continue doing so? ';
+    if (confirm(confirmRestart) === true) {
+      window.location.href = window.location.href.split('/project-request')[0]+'/project-request/';
+      localStorage.setItem('iam.run.currentSlide', 0);
+    }
+  }
+}
+
+
+function swiperConditions() {
+  document.querySelectorAll('[name="new-account"]').forEach(item => {
+    item.addEventListener('click', event => {
+      if (item.value === 'Yes') {
+        swiper.slideTo(3);
+        if (document.querySelector('.slide-new-account').classList.contains('disabled')) {
+          document.querySelector('.slide-new-account').classList.remove('disabled');
+        }
+      }
+      if (item.value === 'No') {
+        document.querySelector('.slide-new-account').classList.add('disabled');
+        swiper.slideTo(4);
+      }
+    });
+  });
+}
