@@ -4,264 +4,419 @@
   <button class='restart'>
     <i class='icon-refresh'></i>
   </button>
+
   <div class='swiper-wrapper'>
+    <!-- slide 0 -->
     <div class='swiper-slide'>
       <div class='swiper-form'>
-        <div><span class='step'></span></div>
-        <div class='fieldset'>
-          <div class='field'>
-            <p>
-              <label>
-                What's your Vendor name?
-                <input type='text' name='vendor-name' placeholder='E.g. Back Pain Breakthrough'>
-              </label>
-            </p>
+        <form method='post'>
+          <div><span class='step'></span></div>
+          <div class='fieldset'>
+            <div class='field'>
+              <p>
+                <label>
+                  What's your Vendor name?
+                  <input type='text' name='vendor-name' placeholder='E.g. Back Pain Breakthrough' required>
+                </label>
+              </p>
+            </div>
+            <div class='field'>
+              <p>
+                <label>
+                  What's the name of this Project?
+                  <input type='text' name='project-name' placeholder='E.g. Text Sales Letter' required>
+                </label>
+              </p>
+            </div>
           </div>
-          <div class='field'>
-            <p>
-              <label>
-                What's the name of this Project?
-                <input type='text' name='project-name' placeholder='E.g. Text Sales Letter'>
-              </label>
-            </p>
-          </div>
-        </div>
+          <button type='button' class='float-l slide-button-last slide-button-nav'>
+            <i class='arrow-l'></i> <span class='text'>Last</span>
+          </button>
+          <button type='submit' class='float-r slide-button-next slide-button-nav'>
+            <span class='text'>Next</span> <i class='arrow-r'></i>
+          </button>
+        </form>
       </div>
     </div>
 
+    <!-- slide 1 -->
     <div class='swiper-slide'>
       <div class='swiper-form'>
-        <div><span class='step'></span></div>
-        <div class='fieldset'>
-          <div class='field'>
-            <p>
-              <label>
-                Please provide all details about this project:
-                <textarea name='project-details' style='min-height:300px'></textarea>
+        <form method='post'>
+          <div><span class='step'></span></div>
+          <div class='fieldset'>
+            <div class='field'>
+              <p>
+                <label>
+                  Please provide all details about this project:
+                  <textarea name='project-details' style='min-height:300px' required></textarea>
+                </label>
+              </p>
+            </div>
+          </div>
+          <button type='button' class='float-l slide-button-last slide-button-nav'>
+            <i class='arrow-l'></i> <span class='text'>Last</span>
+          </button>
+          <button type='submit' class='float-r slide-button-next slide-button-nav'>
+            <span class='text'>Next</span> <i class='arrow-r'></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- slide 2 -->
+    <div class='swiper-slide'>
+      <div class='swiper-form'>
+        <form method='post'>
+          <div><span class='step'></span></div>
+          <div class='fieldset'>
+            <p>Is this a new account?</p>
+            <div class='field'>
+              <label class='click'>
+                <input type='radio' name='new-account' value='Yes' required  onclick='swiper.slideTo(3); enableSlide(3)'> Yes
               </label>
-            </p>
+            </div>
+            <div class='field'>
+              <label class='click'>
+                <input type='radio' name='new-account' value='No' required  onclick='swiper.slideTo(4); disableSlide(3)'> No
+              </label>
+            </div>
+            <br>
+
+            <button type='button' class='float-l slide-button-last slide-button-nav'>
+              <i class='arrow-l'></i> <span class='text'>Last</span>
+            </button>
+            <!--
+            <button type='submit' class='float-r slide-button-next slide-button-nav'>
+              <span class='text'>Next</span> <i class='arrow-r'></i>
+            </button>
+            -->
           </div>
-        </div>
+        </form>
       </div>
     </div>
 
-    <div class='swiper-slide'>
-      <div class='swiper-form'>
-        <div><span class='step'></span></div>
-        <div class='fieldset'>
-          <p>Is this a new account?</p>
-          <div class='field'>
-            <label class='click'>
-              <input type='radio' name='new-account' value='Yes'> Yes
-            </label>
-          </div>
-          <div class='field'>
-            <label class='click'>
-              <input type='radio' name='new-account' value='No'> No
-            </label>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    <!-- slide 3 -->
     <div class='swiper-slide slide-new-account'>
       <div class='swiper-form'>
-        <div><span class='step'></span></div>
-        <div><span class='skip'>Skip this step if you chose <b><u>NO</u></b> in the previous step <button class='button' onclick='swiper.slideNext()'><i class='rarr'></i></button></span></div>
-        <div class='fieldset'>
-          <div class='field'>
-            <p>
-              <label>
-                What's the Company name?
-                <input type='text' name='company-name' placeholder='E.g. My Golfing Store, Inc.'>
-              </label>
-            </p>
+        <form method='post'>
+          <div><span class='step'></span></div>
+          <div>
+            <span class='skip'>Skip this step if you chose <b><u>NO</u></b> on the previous step.</span>
           </div>
-          <div class='field'>
-            <p>
-              <label>
-                Contact name:
-                <input type='text' name='contact-name' placeholder=''>
-              </label>
-            </p>
+          <div class='fieldset'>
+            <fieldset>
+              <div class='field'>
+                <p>
+                  <label>
+                    What's the Company name?
+                    <input type='text' name='company-name' placeholder='E.g. My Golfing Store, Inc.' required>
+                  </label>
+                </p>
+              </div>
+              <div class='field'>
+                <p>
+                  <label>
+                    Contact name:
+                    <input type='text' name='contact-name' placeholder='' required>
+                  </label>
+                </p>
+              </div>
+              <div class='field'>
+                <p>
+                  <label>
+                    <span class='display-block'>Contact Email or Skype:</span>
+                    <input type='email' name='contact-email' placeholder='Email address' style='max-width:49%; margin-right:1.1%; display:inline-block;' required> <input type='email' name='contact-email' placeholder='Skype username' style='max-width:49%; display:inline-block;'>
+                  </label>
+                </p>
+                <!--
+                <p>
+                  <label>
+                    <span class='display-block'>Access credentials:</span>
+                    <input type='email' name='contact-email' placeholder='Email address' style='max-width:49%; margin-right:1.1%; display:inline-block;'> <input type='email' name='contact-email' placeholder='Skype username' style='max-width:49%; display:inline-block;'>
+                  </label>
+                </p>
+              -->
+              </div>
+            </fieldset>
+            <button type='button' class='float-l slide-button-last slide-button-nav'>
+              <i class='arrow-l'></i> <span class='text'>Last</span>
+            </button>
+            <button type='submit' class='float-r slide-button-next slide-button-nav'>
+              <span class='text'>Next</span> <i class='arrow-r'></i>
+            </button>
           </div>
-          <div class='field'>
-            <p>
-              <label>
-                <span class='display-block'>Contact Email or Skype:</span>
-                <input type='email' name='contact-email' placeholder='Email address' style='max-width:49%; margin-right:1.1%; display:inline-block;'> <input type='email' name='contact-email' placeholder='Skype username' style='max-width:49%; display:inline-block;'>
+        </fieldset>
+        </form>
+      </div>
+    </div>
+
+    <!-- slide 4 -->
+    <div class='swiper-slide'>
+      <div class='swiper-form'>
+        <form method='post'>
+          <div><span class='step'></span></div>
+          <div class='fieldset'>
+            <p>Has the COI been submitted and approved? (If applicable for physical goods)</p>
+            <div class='field'>
+              <label class='click'>
+                <input type='radio' name='coi-approved' value='Yes' required onclick='swiper.slideTo(5);'> Yes
               </label>
-            </p>
-            <!--
-            <p>
-              <label>
-                <span class='display-block'>Access credentials:</span>
-                <input type='email' name='contact-email' placeholder='Email address' style='max-width:49%; margin-right:1.1%; display:inline-block;'> <input type='email' name='contact-email' placeholder='Skype username' style='max-width:49%; display:inline-block;'>
+            </div>
+            <div class='field'>
+              <label class='click'><input type='radio' name='coi-approved' value='No' required onclick='swiper.slideTo(5);'> No
               </label>
-            </p>
+            </div>
+            <div class='field'>
+              <label class='click'><input type='radio' name='coi-approved' value='Not Applicable' required onclick='swiper.slideTo(5);'> Not Applicable
+              </label>
+            </div>
+          </div>
+          <button type='button' class='float-l slide-button-last slide-button-nav'>
+            <i class='arrow-l'></i> <span class='text'>Last</span>
+          </button>
+          <!--
+          <button type='submit' class='float-r slide-button-next slide-button-nav'>
+            <span class='text'>Next</span> <i class='arrow-r'></i>
+          </button>
           -->
-          </div>
-        </div>
+        </form>
       </div>
     </div>
 
+    <!-- slide 5 -->
     <div class='swiper-slide'>
       <div class='swiper-form'>
-        <div><span class='step'></span></div>
-        <div class='fieldset'>
-          <p>Has the COI been submitted and approved? (If applicable for physical goods)</p>
-          <div class='field'>
-            <label class='click'>
-              <input type='radio' name='coi-approved' value='Yes'> Yes
-            </label>
-          </div>
-          <div class='field'>
-            <label class='click'><input type='radio' name='coi-approved' value='No'> No
-            </label>
-          </div>
-          <div class='field'>
-            <label class='click'><input type='radio' name='coi-approved' value='Not Applicable'> Not Applicable
-            </label>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class='swiper-slide'>
-      <div class='swiper-form'>
-        <div><span class='step'></span></div>
-        <div class='fieldset'>
-          <div class='field'>
-            <p>
-              <label>
-                What's the manufacture name?
-                <input type='text' name='manufacture-name' placeholder=''>
-              </label>
-            </p>
-          </div>
-          <div class='field'>
-            <p>
-              <label>
-                Manufacture address:
-                <input type='text' name='manufacture-address' placeholder=''>
-              </label>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class='swiper-slide'>
-      <div class='swiper-form'>
-        <div><span class='step'></span></div>
-        <div class='fieldset'>
-          <div class='field'>
-            <p>
-              <label>
-                What's the fulfillment name?
-                <input type='text' name='fulfillment-name' placeholder=''>
-              </label>
-            </p>
-          </div>
-          <div class='field'>
-            <p>
-              <label>
-                Fulfillment address:
-                <input type='text' name='fulfillment-address' placeholder=''>
-              </label>
-            </p>
-          </div>
-          <div class='field'>
-            <p style='margin-bottom:0'>Will we set up the integration with the fulfillment company?</p>
+        <form method='post'>
+          <div><span class='step'></span></div>
+          <div class='fieldset'>
             <div class='field'>
-              <label class='click'><input type='radio' name='fulfillment-integration' value='No'> Yes
+              <p>
+                <label>
+                  What's the manufacture name?
+                  <input type='text' name='manufacture-name' placeholder='' required>
+                </label>
+              </p>
+            </div>
+            <div class='field'>
+              <p>
+                <label>
+                  Manufacture address:
+                  <input type='text' name='manufacture-address' placeholder='' required>
+                </label>
+              </p>
+            </div>
+          </div>
+          <button type='button' class='float-l slide-button-last slide-button-nav'>
+            <i class='arrow-l'></i> <span class='text'>Last</span>
+          </button>
+          <button type='submit' class='float-r slide-button-next slide-button-nav'>
+            <span class='text'>Next</span> <i class='arrow-r'></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- slide 6 -->
+    <div class='swiper-slide'>
+      <div class='swiper-form'>
+        <form method='post'>
+          <div><span class='step'></span></div>
+          <div class='fieldset'>
+            <div class='field'>
+              <p>
+                <label>
+                  What's the fulfillment name?
+                  <input type='text' name='fulfillment-name' placeholder='' required>
+                </label>
+              </p>
+            </div>
+            <div class='field'>
+              <p>
+                <label>
+                  Fulfillment address:
+                  <input type='text' name='fulfillment-address' placeholder='' required>
+                </label>
+              </p>
+            </div>
+            <div class='field'>
+              <p style='margin-bottom:0'>Will we set up the integration with the fulfillment company?</p>
+              <div class='field'>
+                <label class='click'><input type='radio' name='fulfillment-integration' value='No' required> Yes
+                </label>
+              </div>
+              <div class='field'>
+                <label class='click'><input type='radio' name='fulfillment-integration' value='No' required> No
+                </label>
+              </div>
+            </div>
+          </div>
+          <button type='button' class='float-l slide-button-last slide-button-nav'>
+            <i class='arrow-l'></i> <span class='text'>Last</span>
+          </button>
+          <button type='submit' class='float-r slide-button-next slide-button-nav'>
+            <span class='text'>Next</span> <i class='arrow-r'></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+
+    <!-- slide 7 -->
+    <div class='swiper-slide'>
+      <div class='swiper-form'>
+        <form method='post'>
+          <div><span class='step'></span></div>
+          <div class='fieldset'>
+            <!-- <div class='field'>
+              <p>
+                <label>
+                  <span class='display-block' style='margin-bottom:15px'>Is this a Text Sales Page (TSL) or a Video Sales Page (VSL)?</span>
+                  <select name='page-type' class='jumpable' required onchange='switchSlideToSkip(value); swiper.slideTo(value)'>
+                    <option value='' disabled selected>Select</option>
+                    <option value='8'>TSL</option>
+                    <option value='9'>VSL</option>
+                  </select>
+                </label>
+              </p>
+            </div> -->
+            <p style='margin-bottom:15px'>Is this a text sales page (TSL) or a video sales page (VSL)?</p>
+            <div class='field'>
+              <label class='click'>
+                <input type='radio' name='page-type' value='8' required  onclick='switchSlideToSkip(value); swiper.slideTo(value)'> TSL
               </label>
             </div>
             <div class='field'>
-              <label class='click'><input type='radio' name='fulfillment-integration' value='No'> No
+              <label class='click'>
+                <input type='radio' name='page-type' value='9' required  onclick='switchSlideToSkip(value); swiper.slideTo(value)'> VSL
               </label>
             </div>
           </div>
-        </div>
+          <button type='button' class='float-l slide-button-last slide-button-nav'>
+            <i class='arrow-l'></i> <span class='text'>Last</span>
+          </button>
+
+          <!-- <button type='submit' class='float-r slide-button-next slide-button-nav'>
+            <span class='text'>Next</span> <i class='arrow-r'></i>
+          </button> -->
+
+        </form>
       </div>
     </div>
 
-
-    <div class='swiper-slide'>
+    <!-- slide 8 -->
+    <div class='swiper-slide slide-tsl skip-next-slide'>
       <div class='swiper-form'>
-        <div><span class='step'></span></div>
-        <div class='fieldset'>
-          <div class='field'>
-            <p>
-              <label>
-                <span class='display-block' style='margin-bottom:15px'>Is this a text sales page (TSL) or a video sales page (VSL)?</span>
-                <select name='page-type'>
-                  <option value='' disabled selected>Select</option>
-                  <option value='tsl'>TSL</option>
-                  <option value='vsl'>VSL</option>
-                </select>
-              </label>
-            </p>
+        <form method='post'>
+          <div><span class='step'></span></div>
+          <div><span class='skip'>Skip this step if you chose <b><u>VSL</u></b> on the previous step.</span></div>
+          <div class='fieldset'>
+            <div class='field'>
+              <p>Please provide the copy document for the TSL:</p>
+              <input
+                name='tsl-documents'
+                type='file'
+                class='drag-drop'
+                accept='.txt,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document'>
+              <input name='tsl-loom' type='url' style='width:49%; padding:21px' placeholder='Or paste url to document here'>
+            </div>
+            <div class='field'>
+              <p>
+                <label>
+                  Please provide video instructions, if any:
+                  <input name='tsl-loom' type='url' placeholder='E.g. https://www.loom.com/some-video'>
+                </label>
+              </p>
+            </div>
           </div>
-        </div>
+          <button type='button' class='float-l slide-button-last slide-button-nav'>
+            <i class='arrow-l'></i> <span class='text'>Last</span>
+          </button>
+          <button type='submit' class='float-r slide-button-next slide-button-nav'>
+            <span class='text'>Next</span> <i class='arrow-r'></i>
+          </button>
+        </form>
       </div>
     </div>
 
-    <div class='swiper-slide slide-tsl'>
-      <div class='swiper-form'>
-        <div><span class='step'></span></div>
-        <div class='fieldset'>
-          <div class='field'>
-            <p>Please provide the copy document for the TSL:</p>
-            <input
-              name='tsl-documents'
-              type='file'
-              class='drag-drop'
-              accept='.txt,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document'>
-            <input name='tsl-loom' type='url' style='width:49%; padding:21px' placeholder='Or paste url to document here'>
-          </div>
-          <div class='field'>
-            <p>
-              <label>
-                Please provide video instructions, if any:
-                <input name='tsl-loom' type='url' placeholder='E.g. https://www.loom.com/some-video'>
-              </label>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
 
+    <!-- slide 9 -->
     <div class='swiper-slide slide-vsl'>
       <div class='swiper-form'>
-        <div><span class='step'></span></div>
-        <div class='fieldset'>
-          <div class='field'>
-            <p>
+        <form method='post'>
+          <div><span class='step'></span></div>
+          <div><span class='skip'>Skip this step if you chose <b><u>TSL</u></b> on the previous step.</span></div>
+          <div class='fieldset'>
+            <div class='field'>
+              <p>
 
-              <span class='display-block'>Please provide the script for the VSL:</span>
-                <input
-                  name='vsl-documents'
-                  type='file'
-                  class='drag-drop'
-                  accept='.txt,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document'>
-                <input name='tsl-loom' type='url' style='width:49%; padding:21px' placeholder='Or paste url to document here'>
-            </p>
+                <span class='display-block'>Please provide the script for the VSL:</span>
+                  <input
+                    name='vsl-documents'
+                    type='file'
+                    class='drag-drop'
+                    accept='.txt,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document'>
+                  <input name='tsl-loom' type='url' style='width:49%; padding:21px' placeholder='Or paste url to document here'>
+              </p>
+            </div>
+            <div class='field'>
+              <p>
+                <label>
+                  Please provide video instructions, if any:
+                  <input name='tsl-loom' type='url' placeholder='E.g. https://www.loom.com/some-video'>
+                </label>
+              </p>
+            </div>
           </div>
-          <div class='field'>
-            <p>
-              <label>
-                Please provide video instructions, if any:
-                <input name='tsl-loom' type='url' placeholder='E.g. https://www.loom.com/some-video'>
-              </label>
-            </p>
+          <button type='button' class='float-l slide-button-last slide-button-nav'>
+            <i class='arrow-l'></i> <span class='text'>Last</span>
+          </button>
+          <button type='submit' class='float-r slide-button-next slide-button-nav'>
+            <span class='text'>Next</span> <i class='arrow-r'></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
+
+    <!-- slide 10 -->
+    <div class='swiper-slide'>
+      <div class='swiper-form'>
+        <form method='post'>
+          <div><span class='step'></span></div>
+          <div class='fieldset'>
+            <div class='field'>
+              <p>
+                <span class='display-block'>Please provide the script for the VSL:</span>
+                  <input
+                    name='vsl-documents'
+                    type='file'
+                    class='drag-drop'
+                    accept='.txt,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document'>
+                  <input name='tsl-loom' type='url' style='width:49%; padding:21px' placeholder='Or paste url to document here'>
+              </p>
+            </div>
+            <div class='field'>
+              <p>
+                <label>
+                  Please provide video instructions, if any:
+                  <input name='tsl-loom' type='url' placeholder='E.g. https://www.loom.com/some-video'>
+                </label>
+              </p>
+            </div>
           </div>
-        </div>
+
+          <button type='button' class='float-l slide-button-last slide-button-nav'>
+            <i class='arrow-l'></i> <span class='text'>Last</span>
+          </button>
+          <button type='submit' class='float-r slide-button-next slide-button-nav'>
+            <span class='text'>Next</span> <i class='arrow-r'></i>
+          </button>
+        </form>
       </div>
     </div>
 
     <!--
-
     <div class='swiper-slide'>
       <div class='swiper-form'>
         <div><span class='step'></span></div>
@@ -273,10 +428,12 @@
         </div>
       </div>
     -->
-  </div>
+  </div><!--/swiper-wrapper-->
 
+  <!--
   <div class='swiper-button-next'></div>
   <div class='swiper-button-prev'></div>
+  -->
   <div class='swiper-pagination'></div>
 </div>
 

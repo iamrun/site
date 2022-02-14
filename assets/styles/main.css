@@ -96,6 +96,7 @@ presets
 .float-r { float: right }
 .float-l { float: left  }
 
+button,
 .button,
 input[type='button'] {
   padding: 15px 50px;
@@ -104,6 +105,7 @@ input[type='button'] {
   border: 0;
   cursor: pointer;
   font-size: .95em;
+  font-family: inherit;
 }
 
 .button:hover {
@@ -118,6 +120,53 @@ input[type='button'] {
   border-top-color: #333;
   border-right-color: #333;
   transform: rotate(45deg);
+}
+
+.arrow-r,
+.arrow-l {
+  /*
+  width: 30px;
+  height: 2px;
+  */
+  width: 0;
+  height: 0;
+  margin: 0;
+  display: inline-block;
+  position: relative;
+  background-color: #222B53;
+  vertical-align: middle;
+  transition: all .3s ease;
+}
+
+.arrow-l { margin-right: 10px }
+.arrow-r { margin-left:  10px }
+
+.arrow-r::after,
+.arrow-l::before {
+  /* top: -5px; */
+  top: -5px;
+  width: 0;
+  height: 0;
+  display: inline-block;
+  position: absolute;
+  content: '';
+  background-color: transparent;
+  border: 6px solid transparent;
+}
+
+.arrow-r::after {
+  left: calc(100% - 5px);
+  right: 0;
+  border-left-color: #222B53;
+}
+
+.arrow-l::before {
+  left: -7px;
+  right: auto;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-right-color: #222B53;
 }
 
 /*
@@ -194,6 +243,9 @@ swiper
   object-fit: cover;
 }
 
+.swiper .swiper-slide:first-child .slide-button-last { display: none }
+.swiper .swiper-slide:last-child  .slide-button-next { display: none }
+
 .swiper-form {
   width: 80%;
   max-width: 800px;
@@ -226,6 +278,12 @@ swiper
 
 .swiper-form textarea {
   min-height: 150px;
+}
+
+.swiper-form fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 .swiper-form .fieldset p input,
@@ -267,6 +325,24 @@ swiper
 
 .swiper-form input[type='file'].drag-drop:active::after {
   background-color: #f3f3f3;
+}
+
+.slide-button-nav {
+  padding: 15px 0;
+  background-color: transparent;
+  border-radius: 100px;
+  /* border: 2px solid transparent; */
+}
+
+.slide-button-nav .text {
+  top: 2px;
+  position: relative;
+}
+
+.slide-button-nav:hover .arrow-l,
+.slide-button-nav:hover .arrow-r {
+  width: 30px;
+  height: 2px;
 }
 
 .swiper .step {
@@ -339,12 +415,12 @@ swiper
   text-align: left;
 }
 
-.swiper-slide.disabled .fieldset {
+.swiper-slide.disabled .fieldset .field {
   opacity: .2;
   pointer-events: none;
 }
 
-.swiper-slide.disabled .fieldset {
+.swiper-slide.disabled .fieldset .field {
   text-decoration: line-through;
 }
 
